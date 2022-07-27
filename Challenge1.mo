@@ -10,21 +10,25 @@ actor{
     public func squareFunc(length : Nat) : async Nat{
     return(length**length);
     }
-
+    
+    
     //challenge 3
     public func days_to_second(n : Nat) : async Nat{
     return(n*86400);
     }
-
+    
+    var counter = 0;
     //Challenge 4
     public func increment_counter(n : Nat) : async Nat{
-    return(n+n);
+    counter += n;
+    return(counter);
     };
 
 
     //Challenge 5
     public func clear_counter() : async Nat{
-    return(0);
+    counter := 0;
+    return(counter);
     }
 
     public func divide(n : Nat, m: Nat) : async Bool{
